@@ -18,7 +18,7 @@ This is a personal blogging website created using the Laravel framework and Mong
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your-repo-url.git`
+1. Clone the repository: `git clone https://github.com/exiled-scot/Laravel-and-MongoDB-Personal-Blogging-Website.git`
 2. Install the dependencies: `composer install`
 3. Configure the database connection in the `.env` file.
 4. Run the migrations: `php artisan migrate`
