@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./blog:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - laravel-network
+    environment:
+      - APP_ENV=local
+
+  db:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodata:/data/db
+    networks:
+      - laravel-network
+
+volumes:
+  mongodata:
+
+networks:
+  laravel-network:
